@@ -3,6 +3,9 @@ cam = cv2.VideoCapture(0)
 
 cv2.namedWindow("canny filter")
 
+if cam.read() == False:
+    cam.open()
+
 img_counter = 0
 
 ret, image = cam.read()
